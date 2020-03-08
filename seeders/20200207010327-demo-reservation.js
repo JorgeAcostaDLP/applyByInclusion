@@ -18,12 +18,14 @@ module.exports = {
           textInput: 'Name',
           textArea: 'Description',
           checkBox: true,
+          createdAt: new Date(),
           date: new Date()
         },
         {
           textInput: 'Name1',
           textArea: 'Description1',
           checkBox: true,
+          createdAt: new Date(),
           date: new Date()
         }
       ])

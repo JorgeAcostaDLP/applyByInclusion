@@ -27,11 +27,11 @@ module.exports = {
           allowNull: false,
           type: Sequelize.DATE
         },
-        CommentId: {
+        adminId: {
           allowNull: true,
           type: Sequelize.INTEGER
         },
-        CommentId: {
+        Comment: {
           allowNull: true,
           type: Sequelize.TEXT
         },

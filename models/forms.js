@@ -6,8 +6,10 @@ module.exports = (sequelize, DataTypes) => {
       textInput: DataTypes.STRING,
       textArea: DataTypes.TEXT,
       checkBox: DataTypes.BOOLEAN,
+      createdAt: DataTypes.DATE,
       date: DataTypes.DATE,
-      createdAt: DataTypes.DATE
+      adminId: DataTypes.INTEGER,
+      comment: DataTypes.TEXT
     },
     {}
   );

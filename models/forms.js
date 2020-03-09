@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         textArea: textArea,
         checkBox: checkBox,
         date: date,
-        createdAt: new Date()
+        createdAt: date
       });
       return newForm;
     }

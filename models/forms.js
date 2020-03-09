@@ -1,20 +1,18 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const SequelizeForm = sequelize.define(
+  const SequelizeForms = sequelize.define(
     'Forms',
     {
       textInput: DataTypes.STRING,
       textArea: DataTypes.TEXT,
       checkBox: DataTypes.BOOLEAN,
       createdAt: DataTypes.DATE,
-      date: DataTypes.DATE,
-      adminId: DataTypes.INTEGER,
-      comment: DataTypes.TEXT
+      date: DataTypes.DATE
     },
     {}
   );
 
-  class Forms extends SequelizeForm {
+  class Forms extends SequelizeForms {
     static async all() {
       return await this.findAll();
     }

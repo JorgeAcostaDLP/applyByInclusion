@@ -26,15 +26,16 @@ module.exports = (sequelize, DataTypes) => {
       });
       return newForm;
     }
-    static async newForm(textInput, textArea, checkBox, date) {
-      const newForm = await this.create({
-        textInput: textInput,
-        textArea: textArea,
-        checkBox: checkBox,
-        date: date,
-        createdAt: new Date()
-      });
-      return newForm;
+
+    //this method will search for a form with a particular ID and add an adminId as well as a comment to it,
+    static async update(formId, adminId, comment) {
+      const updatedForm = await this.update(
+        {
+          comment: comment,
+          adminId: adminId
+        },
+        { where: { id: formId } }
+      );
     }
   }
 

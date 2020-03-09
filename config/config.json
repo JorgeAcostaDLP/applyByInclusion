@@ -8,6 +8,7 @@
     "storage": "data.test.sqlite3"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "DATABASE_URL",
+    "storage": "data.production.sqlite3"
   }
 }

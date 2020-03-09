@@ -9,9 +9,9 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // handle api calls from here
+
 app.use('/forms', formsRouter);
 app.use('/admins', adminsRouter);
-
 app.listen(port, () => {
   console.log(`Server app listening on port ${port}!`);
 });

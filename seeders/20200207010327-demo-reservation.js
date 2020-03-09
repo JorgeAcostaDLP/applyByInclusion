@@ -17,15 +17,15 @@ module.exports = {
       ]),
       queryInterface.bulkInsert('Forms', [
         {
-          textInput: 'Name',
-          textArea: 'Description',
+          textInput: 'Name1',
+          textArea: 'Description1',
           checkBox: true,
           createdAt: new Date(),
           date: new Date()
         },
         {
-          textInput: 'Name1',
-          textArea: 'Description1',
+          textInput: 'Name2',
+          textArea: 'Description2',
           checkBox: true,
           createdAt: new Date(),
           date: new Date()

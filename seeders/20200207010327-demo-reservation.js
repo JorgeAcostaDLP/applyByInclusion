@@ -6,11 +6,13 @@ module.exports = {
       queryInterface.bulkInsert('Admins', [
         {
           userName: 'John Cena',
-          userPassword: 'JohnCena'
+          userPassword: 'JohnCena',
+          createdAt: new Date()
         },
         {
           userName: 'Not John Cena',
-          userPassword: 'NotCena'
+          userPassword: 'NotCena',
+          createdAt: new Date()
         }
       ]),
       queryInterface.bulkInsert('Forms', [

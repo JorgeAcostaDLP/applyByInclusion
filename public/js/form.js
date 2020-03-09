@@ -41,7 +41,7 @@ var emailbreak = document.createElement('br');
 createform.appendChild(emailbreak);
 
 var messagelabel = document.createElement('label'); // Append Textarea
-messagelabel.innerHTML = "Why would you like to be part of Inclusoon? : ";
+messagelabel.innerHTML = "Why would you like to be part of Inclusion? : ";
 createform.appendChild(messagelabel);
 
 var texareaelement = document.createElement('textarea');

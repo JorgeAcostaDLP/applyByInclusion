@@ -9,6 +9,11 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER
         },
+        status: {
+          allowNull: true,
+          defaultValue: 'New',
+          type: Sequelize.STRING
+        },
         textInput: {
           type: Sequelize.STRING
         },

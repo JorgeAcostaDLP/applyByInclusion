@@ -58,6 +58,22 @@ test('Forms.newForm(...) populates fields correctly', async () => {
   expect(newForm.dataValues.textInput).toEqual('testInput');
 });
 
+test('Forms.newForm(...) adds status field defaulting to "new"', async () => {
+  const newForm = await Forms.newForm(
+    'testInput',
+    'testArea',
+    true,
+    new Date()
+  );
+  expect(newForm.dataValues.status).toEqual('New');
+});
+
+test('Forms.update(...) will update status field', async () => {
+  a = await Forms.updateForm(1, 'Accepted');
+  results = await Forms.findAll();
+  expect(results[0].dataValues.status).toEqual('Accepted');
+});
+
 //Comments method testing
 test('Comments.all() should return an array', async () => {
   const result = (await Comments.all()) || [];

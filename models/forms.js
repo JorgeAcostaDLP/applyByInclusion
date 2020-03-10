@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const SequelizeForms = sequelize.define(
     'Forms',
     {
+      status: DataTypes.STRING,
       textInput: DataTypes.STRING,
       textArea: DataTypes.TEXT,
       checkBox: DataTypes.BOOLEAN,
@@ -22,20 +23,15 @@ module.exports = (sequelize, DataTypes) => {
         textArea: textArea,
         checkBox: checkBox,
         date: date,
-        createdAt: date
+        createdAt: date,
+        status: 'New'
       });
       return newForm;
     }
 
     //this method will search for a form with a particular ID and add an adminId as well as a comment to it,
-    static async update(formId, adminId, comment) {
-      const updatedForm = await this.update(
-        {
-          comment: comment,
-          adminId: adminId
-        },
-        { where: { id: formId } }
-      );
+    static async updateForm(id, status) {
+      await this.update({ status: status }, { where: { id: id } });
     }
   }
 

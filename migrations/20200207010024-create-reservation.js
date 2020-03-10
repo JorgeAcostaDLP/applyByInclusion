@@ -27,14 +27,6 @@ module.exports = {
           allowNull: false,
           type: Sequelize.DATE
         },
-        adminId: {
-          allowNull: true,
-          type: Sequelize.INTEGER
-        },
-        Comment: {
-          allowNull: true,
-          type: Sequelize.TEXT
-        },
         updatedAt: {
           allowNull: true,
           type: Sequelize.DATE
@@ -61,12 +53,42 @@ module.exports = {
           allowNull: true,
           type: Sequelize.DATE
         }
+      }),
+      queryInterface.createTable('Comments', {
+        id: {
+          allowNull: false,
+          autoIncrement: true,
+          primaryKey: true,
+          type: Sequelize.INTEGER
+        },
+        adminKey: {
+          allowNull: false,
+          type: Sequelize.INTEGER
+        },
+        formKey: {
+          allowNull: false,
+          type: Sequelize.INTEGER
+        },
+        createdAt: {
+          allowNull: true,
+          type: Sequelize.DATE
+        },
+        comment: {
+          allowNull: true,
+          type: Sequelize.TEXT
+        },
+        updatedAt: {
+          allowNull: true,
+          type: Sequelize.DATE
+        }
       })
     );
   },
   down: (queryInterface, Sequelize) => {
     return (
-      queryInterface.dropTable('Forms'), queryInterface.dropTable('Admins')
+      queryInterface.dropTable('Forms'),
+      queryInterface.dropTable('Admins'),
+      queryInterface.dropTable('Comments')
     );
   }
 };

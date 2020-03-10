@@ -17,9 +17,4 @@ router.post('/', async (req, res) => {
   );
 });
 
-//this route uses put to update an existing form with a comment made by a single admin. It requires form id to update a particular form
-router.put('/', async (req, res) => {
-  await Forms.update(req.body.formId, req.body.adminId, req.body.comment);
-});
-
 module.exports = router;

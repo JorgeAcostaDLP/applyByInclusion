@@ -1,4 +1,4 @@
-const { Admins, Forms } = require('../../models');
+const { Admins, Forms, Comments } = require('../../models');
 
 //Admins method testing
 test('Admins.all() should return an array', async () => {
@@ -14,7 +14,6 @@ test('Admins.newAdmin(...) creates a new Admin in table', async () => {
 
 test('Admins.newAdmin(...) increases id of newAdmin by 1', async () => {
   const newAdmin = await Admins.newAdmin('test1', 'testPassword1');
-  console.log(newAdmin);
   expect(newAdmin.dataValues.id).toEqual(4);
 });
 test('Admins.newAdmin(...) populates the fields correctly', async () => {
@@ -57,4 +56,25 @@ test('Forms.newForm(...) populates fields correctly', async () => {
     new Date()
   );
   expect(newForm.dataValues.textInput).toEqual('testInput');
+});
+
+//Comments method testing
+test('Comments.all() should return an array', async () => {
+  const result = (await Comments.all()) || [];
+  expect(result.length).toEqual(1);
+});
+
+test('Comment.newComment(...) creates a new Comment in table', async () => {
+  await Comments.newComment(2, 1, 'This is another test comment');
+  const result = await Comments.all();
+  expect(result.length).toEqual(2);
+});
+
+test('Comments.newAdmin(...) increases id of newAdmin by 1', async () => {
+  const newComment = await Comments.newComment('test1', 'testPassword1');
+  expect(newComment.dataValues.id).toEqual(3);
+});
+test('Comments.newAdmin(...) populates the fields correctly', async () => {
+  const newComment = await Comments.newComment(2, 1, 'last test');
+  expect(newComment.dataValues.comment).toEqual('last test');
 });

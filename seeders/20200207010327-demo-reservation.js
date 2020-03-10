@@ -30,6 +30,14 @@ module.exports = {
           createdAt: new Date(),
           date: new Date()
         }
+      ]),
+      queryInterface.bulkInsert('Comments', [
+        {
+          adminKey: 1,
+          formKey: 1,
+          comment: 'This is a test comment',
+          createdAt: new Date()
+        }
       ])
     );
   },
@@ -37,7 +45,8 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return (
       queryInterface.bulkDelete('Admins', null, {}),
-      queryInterface.bulkDelete('Forms')
+      queryInterface.bulkDelete('Forms'),
+      queryInterface.bulkDelete('Comments')
     );
   }
 };

@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
 
 //this route uses post to create a new row in the FORMS table using the newForm method
 router.post('/', async (req, res) => {
-  console.log(req);
   await Forms.newForm(
     req.body.textInput,
     req.body.textArea,
@@ -17,9 +16,9 @@ router.post('/', async (req, res) => {
   );
 });
 
-//this route uses put to update an existing form with a comment made by a single admin. It requires form id to update a particular form
+//this route will update the status
 router.put('/', async (req, res) => {
-  await Forms.update(req.body.formId, req.body.adminId, req.body.comment);
+  await Forms.update(req.body.formId, req.body.status);
 });
 
 module.exports = router;

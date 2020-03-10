@@ -17,10 +17,12 @@ module.exports = (sequelize, DataTypes) => {
 
     //this is the method used to create newAdmins
     static async newAdmin(userName, userPassword) {
-      await this.create({
+      const newAdmin = await this.create({
         userName: userName,
-        userPassword: userPassword
+        userPassword: userPassword,
+        createdAt: new Date()
       });
+      return newAdmin;
     }
   }
 

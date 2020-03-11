@@ -12,7 +12,9 @@ fetch('/forms')
       table.DataTable({
         data: applications,
         columns: [
-          { data: 'textInput' },
+          {
+            data: 'textInput'
+          },
           { data: 'status' },
           { data: 'createdAt' }
         ]

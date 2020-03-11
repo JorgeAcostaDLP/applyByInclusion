@@ -3,44 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FORMS</title>
-    <link href="css/form.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/landing.css" rel="stylesheet" />
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <title>Inclusion</title>
   </head>
   <body>
-    <div id="main">
-      <h1>APPLY by Inclusion</h1>
-      <form id="form2">
-        <h2>Application for 2020</h2>
-        <hr /> <label>Date : </label>
-        <br/>
-        <input type='date' name='date' id='date' required></input>
-        <br />
-        <label>Your Name : </label>
-        <input
-          type="text"
-          name="textInput"
-          id="textInput"
-          placeholder="Name"
-          required
-        />
-        <br />
-        <label>Your Email : </label>
-        <input type="text" name="email" placeholder="email" />
-        <br />
-        <input type="checkbox" id="checkBox" name="checkBox">Graduated</input>
-        <br/>
-        <br/>
-        <label>Why would you like to be part of Inclusion? : </label>
-        <textarea name="textArea" id="textArea" required></textarea>
-        <br />
-        <button id="submit" type="submit">Submit</button>
-      </form>
+    <div id="landing-page">
+      <div class="jumbotron">
+        <h1>Welcome to Inclusion!</h1>
+        <div id="menu">
+          <a type="button" class="btn btn-info btn-lg" href="apply.html">Apply</a>
+          <a type="button" class="btn btn-light btn-lg">Log In</a>
+        </div>
+      </div>
     </div>
-      <script src="js/form.js"></script>
-      <script src="js/utils.js"></script>
-      <script src="js/main.js"></script>
-
   </body>
 </html>

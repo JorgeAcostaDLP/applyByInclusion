@@ -27,6 +27,11 @@ test('Forms.all() should return an array', async () => {
   expect(result.length).toEqual(3);
 });
 
+test('Forms.single() should return a single form entry', async () => {
+  const result = (await Forms.single(1)) || [];
+  expect(result.length).toEqual(1);
+});
+
 test('Forms.newForm(...) creates a new applicant form', async () => {
   const newForm = await Forms.newForm(
     'testInput',

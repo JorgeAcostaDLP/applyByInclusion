@@ -24,7 +24,7 @@ test('Admins.newAdmin(...) populates the fields correctly', async () => {
 //Forms method testing
 test('Forms.all() should return an array', async () => {
   const result = (await Forms.all()) || [];
-  expect(result.length).toEqual(2);
+  expect(result.length).toEqual(3);
 });
 
 test('Forms.newForm(...) creates a new applicant form', async () => {
@@ -35,7 +35,7 @@ test('Forms.newForm(...) creates a new applicant form', async () => {
     new Date()
   );
   const result = (await Forms.all()) || [];
-  expect(result.length).toEqual(3);
+  expect(result.length).toEqual(4);
 });
 
 test('Forms.newForm(...) increases id by 1', async () => {
@@ -45,7 +45,7 @@ test('Forms.newForm(...) increases id by 1', async () => {
     true,
     new Date()
   );
-  expect(newForm.dataValues.id).toEqual(4);
+  expect(newForm.dataValues.id).toEqual(5);
 });
 
 test('Forms.newForm(...) populates fields correctly', async () => {

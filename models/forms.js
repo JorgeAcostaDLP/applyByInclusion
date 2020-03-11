@@ -28,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
       });
       return newForm;
     }
+    static async single(formId) {
+      const singleForm = await this.findAll({ where: { id: formId } });
+      return singleForm;
+    }
 
     //this method will search for a form with a particular ID and add an adminId as well as a comment to it,
     static async updateForm(id, status) {

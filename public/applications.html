@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="css/landing.css" rel="stylesheet" />
+    <script src="js/applications.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
-    <title>Inclusion</title>
+    <title>Applications</title>
   </head>
   <body>
-    <div id="landing-page">
-      <div class="jumbotron">
-        <h1>Welcome to Inclusion!</h1>
-        <div id="menu">
-          <a type="button" class="btn btn-info btn-lg" href="apply.html">Apply</a>
-          <a type="button" class="btn btn-light btn-lg" href="applications.html">Log In</a>
-        </div>
+    <div id="applications-page">
+      <div>
+        <h1>Applications</h1>
+        <table id="applications-table" class="display" style="width:100%"></table>
       </div>
     </div>
   </body>

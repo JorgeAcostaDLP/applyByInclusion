@@ -6,6 +6,9 @@ router.get('/', async (req, res) => {
   res.json(await Forms.all());
 });
 
+router.get('/:id', async (req, res) => {
+  res.json(await Forms.single(req.params.id));
+});
 //this route uses post to create a new row in the FORMS table using the newForm method
 router.post('/', async (req, res) => {
   await Forms.newForm(

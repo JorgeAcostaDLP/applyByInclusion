@@ -12,15 +12,25 @@ fetch('/forms/' + formId)
     document.getElementById('appInfoWhy').innerHTML = data[0].textArea;
     document.getElementById('appInfoStatus').innerHTML = data[0].status;
   });
-
+let commentAdminKey;
 fetch('/comments/' + formId)
   .then(response => {
     return response.json();
   })
   .then(data => {
-    console.log('datacomment', data);
     data.map(comment => {
-      document.getElementById('previousComments').innerHTML =
-        comment.comment + '. Reviewer id: ' + comment.adminKey;
+      commentAdminKey = comment.adminKey;
+
+      document.getElementById('previousComments').innerHTML = comment.comment;
     });
+    fetch('/admins/' + commentAdminKey.toString())
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        adminName = data[0].userName;
+        document.getElementById('previousComments').innerHTML +=
+          '. Reviewed by ' + adminName;
+      });
   });

@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     'Comments',
     {
       adminKey: DataTypes.INTEGER,
+      adminName: DataTypes.STRING,
       formKey: DataTypes.INTEGER,
       comment: DataTypes.TEXT,
       createdAt: DataTypes.DATE
@@ -23,9 +24,10 @@ module.exports = (sequelize, DataTypes) => {
       return await this.findAll({ where: { formKey: formId } });
     }
 
-    static async newComment(adminId, formId, comment) {
+    static async newComment(adminId, adminName, formId, comment) {
       return await this.create({
         adminKey: adminId,
+        adminName: adminName,
         formKey: formId,
         comment: comment,
         createdAt: new Date()

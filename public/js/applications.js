@@ -6,7 +6,6 @@ fetch('/forms')
     applications = data;
     $(document).ready(function() {
       let table = $('#applications-table');
-      console.log(applications);
       table.DataTable({
         data: applications,
         columns: [

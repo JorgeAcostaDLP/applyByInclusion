@@ -12,9 +12,9 @@ router.get('/:formId', async (req, res) => {
 
 //this route uses put to update an existing form with a comment made by a single admin. It requires form id to update a particular form
 router.post('/', async (req, res) => {
-  console.log('OH MY GOOOOOOD', req);
   await Comments.newComment(
     req.body.adminId,
+    req.body.adminUserName,
     req.body.formId,
     req.body.comment
   );

@@ -1,6 +1,18 @@
 url = document.URL;
 formId = url.split('?')[1];
 
+const form = $('#newComment');
+
+form.on('submit', submitHandler);
+function submitHandler(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '/comments',
+    type: 'POST',
+    data: form.serialize()
+  }).then(location.reload());
+}
+
 fetch('/forms/' + formId)
   .then(response => {
     return response.json();
@@ -21,28 +33,20 @@ fetch('/comments/' + formId)
   .then(data => {
     data.map(comment => {
       commentAdminKey = comment.adminKey;
-
-      document.getElementById('previousComments').innerHTML = comment.comment;
+      document.getElementById('previousComments').innerHTML =
+        document.getElementById('previousComments').innerHTML +
+        comment.comment +
+        ' - Reviewed by ' +
+        comment.adminName +
+        '<br/>';
     });
-    fetch('/admins/' + commentAdminKey.toString())
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);
-        adminName = data[0].userName;
-        document.getElementById('previousComments').innerHTML +=
-          '. Reviewed by ' + adminName;
-      });
   });
 
-const form = $('#newComment');
-form.on('submit', submitHandler);
-async function submitHandler(e) {
-  e.preventDefault();
-  await $.ajax({
-    url: '/comments',
-    type: 'POST',
-    data: form.serialize()
-  }).then(location.reload());
-}
+// let admins = {};
+// fetch('/admins/')
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(data => {
+//     admins = data;
+//   });

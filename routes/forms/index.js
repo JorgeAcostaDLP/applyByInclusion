@@ -11,7 +11,6 @@ router.get('/:id', async (req, res) => {
 });
 //this route uses post to create a new row in the FORMS table using the newForm method
 router.post('/', async (req, res) => {
-  console.log('OH MY GOOOOOOD', req);
   await Forms.newForm(
     req.body.textInput,
     req.body.textArea,

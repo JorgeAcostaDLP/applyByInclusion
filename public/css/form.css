@@ -1,12 +1,7 @@
 /* Below line is write to use Google font online */
 @import 'http://fonts.googleapis.com/css?family=Ubuntu';
-div#main {
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  font-family: 'Ubuntu', sans-serif;
-}
-div#form2 {
+
+#main {
   text-align: center;
   border: 1px solid #ccc;
   width: 600px;

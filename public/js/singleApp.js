@@ -11,6 +11,7 @@ fetch('/forms/' + formId)
     document.getElementById('appInfoGraduated').innerHTML = data[0].checkBox;
     document.getElementById('appInfoWhy').innerHTML = data[0].textArea;
     document.getElementById('appInfoStatus').innerHTML = data[0].status;
+    document.getElementById('formId').value = formId;
   });
 let commentAdminKey;
 fetch('/comments/' + formId)
@@ -34,3 +35,14 @@ fetch('/comments/' + formId)
           '. Reviewed by ' + adminName;
       });
   });
+
+const form = $('#newComment');
+form.on('submit', submitHandler);
+async function submitHandler(e) {
+  e.preventDefault();
+  await $.ajax({
+    url: '/comments',
+    type: 'POST',
+    data: form.serialize()
+  }).then(location.reload());
+}

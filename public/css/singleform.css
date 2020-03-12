@@ -61,7 +61,17 @@ p {
   resize: none;
   text-align: right;
 }
-#addComment {
+form {
+  width: 100%;
+  border: 3px solid #2bc1f2;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  height: auto;
+  resize: none;
+  text-align: right;
+}
+button {
   width: auto;
   padding: 10px 45px;
   background-color: #2bc1f2;

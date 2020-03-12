@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+    <link rel="stylesheet" type="text/css" href="./css/singleform.css" />
     <script
       type="text/javascript"
       charset="utf8"
@@ -20,20 +20,22 @@
     <title>Application</title>
   </head>
   <body>
-    <div id="single-App">
-      <div>
-        <label for="id">Id</label>
-        <textarea name="Id" id="appInfoId"></textarea>
-        <label>Name</label>
-        <textarea id="appInfoName"></textarea>
-        <label>Graduated</label>
-        <textarea id="appInfoGraduated"></textarea>
+    <div clas="main" id="single-App">
+      <div id="form2">
+        <h2 id="appInfoName">Name</h1>
+        <div>
+          <label for="id">Id</label>
+          <p name="Id" id="appInfoId"></p>
+          <label>Graduated</label>
+          <p id="appInfoGraduated"></p>
+        </div>
         <label>Why inclusion?</label>
-        <textarea id="appInfoWhy"></textarea>
+        <p id="appInfoWhy"></p>
         <label>Status</label>
-        <textarea id="appInfoStatus"></textarea>
+        <p id="appInfoStatus"></p>
         <label>Comments:</label>
-        <textarea id="previousComments"></textarea>
+        <p id="previousComments"></p>
+        <button id='addComment'>Add Comment</button>
       </div>
     </div>
     <script src="js/singleApp.js"></script>

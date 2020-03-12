@@ -12,11 +12,11 @@ fetch('/forms')
         columns: [
           { data: 'id' },
           {
-            data: 'textInput',
+            data: 'textInput'
           },
           { data: 'status' },
-          { data: 'createdAt' },
-        ],
+          { data: 'createdAt' }
+        ]
       });
       $(document).on('click', '#applications-table tr', function(e) {
         e.preventDefault();

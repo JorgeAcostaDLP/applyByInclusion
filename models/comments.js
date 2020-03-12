@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       adminKey: DataTypes.INTEGER,
       formKey: DataTypes.INTEGER,
       comment: DataTypes.TEXT,
-      createdAt: DataTypes.DATE,
+      createdAt: DataTypes.DATE
     },
     {}
   );
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     static async singleForm(formId) {
-      return await this.findAll({ where: { formId: formId } });
+      return await this.findAll({ where: { formKey: formId } });
     }
 
     static async newComment(adminId, formId, comment) {
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         adminKey: adminId,
         formKey: formId,
         comment: comment,
-        createdAt: new Date(),
+        createdAt: new Date()
       });
     }
   }

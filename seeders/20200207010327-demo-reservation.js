@@ -41,7 +41,7 @@ module.exports = {
       queryInterface.bulkInsert('Comments', [
         {
           adminKey: 1,
-          formKey: 1,
+          formKey: 3,
           comment: 'This is a test comment',
           createdAt: new Date()
         }

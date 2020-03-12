@@ -12,11 +12,11 @@ fetch('/forms')
         columns: [
           { data: 'id' },
           {
-            data: 'textInput'
+            data: 'textInput',
           },
           { data: 'status' },
-          { data: 'createdAt' }
-        ]
+          { data: 'createdAt' },
+        ],
       });
       $(document).on('click', '#applications-table tr', function(e) {
         e.preventDefault();
@@ -25,7 +25,10 @@ fetch('/forms')
           currentTarget.indexOf('>') + 1,
           currentTarget.indexOf('</')
         );
-        $(location).attr('href', `/forms/` + formId);
+        $(location).attr(
+          'href',
+          'http://localhost:3000/singleApplication.html?' + formId
+        );
       });
     });
   });

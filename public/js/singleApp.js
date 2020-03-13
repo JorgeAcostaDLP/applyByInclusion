@@ -1,15 +1,25 @@
 url = document.URL;
 formId = url.split('?')[1];
 
-const form = $('#newComment');
-
-form.on('submit', submitHandler);
+const newCommentForm = $('#newComment');
+newCommentForm.on('submit', submitHandler);
 function submitHandler(e) {
   e.preventDefault();
   $.ajax({
     url: '/comments',
     type: 'POST',
-    data: form.serialize()
+    data: newCommentForm.serialize()
+  }).then(location.reload());
+}
+
+const updateStatusForm = $('#updateStatus');
+updateStatusForm.on('submit', submitHandler2);
+function submitHandler2(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '/forms',
+    type: 'PUT',
+    data: updateStatusForm.serialize()
   }).then(location.reload());
 }
 
@@ -24,6 +34,7 @@ fetch('/forms/' + formId)
     document.getElementById('appInfoWhy').innerHTML = data[0].textArea;
     document.getElementById('appInfoStatus').innerHTML = data[0].status;
     document.getElementById('formId').value = formId;
+    document.getElementById('statusAdminId').value = formId;
   });
 let commentAdminKey;
 fetch('/comments/' + formId)

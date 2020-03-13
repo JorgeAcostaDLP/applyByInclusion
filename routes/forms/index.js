@@ -21,7 +21,8 @@ router.post('/', async (req, res) => {
 
 //this route will update the status
 router.put('/', async (req, res) => {
-  await Forms.update(req.body.formId, req.body.status);
+  console.log('hagagaa', req.body);
+  await Forms.updateForm(req.body.formId, req.body.status);
 });
 
 module.exports = router;

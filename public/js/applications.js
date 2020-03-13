@@ -31,3 +31,13 @@ fetch('/forms')
       });
     });
   });
+const newAdminForm = $('#newAdmin');
+newAdminForm.on('submit', submitHandler);
+function submitHandler(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '/admins',
+    type: 'POST',
+    data: newAdminForm.serialize()
+  }).then(location.reload());
+}

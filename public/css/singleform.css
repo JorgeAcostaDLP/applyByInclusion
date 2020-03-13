@@ -1,7 +1,12 @@
 /* Below line is write to use Google font online */
 @import 'http://fonts.googleapis.com/css?family=Ubuntu';
-
-#main {
+div#main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+}
+div#form2 {
   text-align: center;
   border: 1px solid #ccc;
   width: 600px;
@@ -43,11 +48,30 @@ textarea {
   padding: 10px;
   margin-bottom: 25px;
   margin-top: 10px;
-  height: 100px;
+  height: auto;
   resize: none;
 }
-
-#submit {
+p {
+  width: 100%;
+  border: 3px solid #2bc1f2;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  height: auto;
+  resize: none;
+  text-align: right;
+}
+form {
+  width: 100%;
+  border: 3px solid #2bc1f2;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  height: auto;
+  resize: none;
+  text-align: right;
+}
+button {
   width: auto;
   padding: 10px 45px;
   background-color: #2bc1f2;
@@ -57,10 +81,4 @@ textarea {
   font-weight: 700;
   cursor: pointer;
   font-family: 'Ubuntu', sans-serif;
-}
-/* -------------------------------------
-CSS for Sidebar (optional)
----------------------------------------- */
-div#fugo {
-  float: right;
 }

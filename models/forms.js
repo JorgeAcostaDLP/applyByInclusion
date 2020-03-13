@@ -35,7 +35,10 @@ module.exports = (sequelize, DataTypes) => {
 
     //this method will search for a form with a particular ID and add an adminId as well as a comment to it,
     static async updateForm(id, status) {
-      await this.update({ status: status }, { where: { id: id } });
+      await this.update(
+        { status: status },
+        { returning: false, where: { id: id } }
+      );
     }
   }
 

@@ -70,6 +70,10 @@ module.exports = {
           allowNull: false,
           type: Sequelize.INTEGER
         },
+        adminName: {
+          allowNull: false,
+          type: Sequelize.STRING
+        },
         formKey: {
           allowNull: false,
           type: Sequelize.INTEGER

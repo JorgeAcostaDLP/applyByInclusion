@@ -21,11 +21,12 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="./css/singleform.css" />    
     <title>Applications</title>
   </head>
   <body>
-    <div id="applications-page">
-      <div>
+    <divid="applications-page">
+      <div id="form2">
         <h1>Applications</h1>
         <table id="applications-table" class="display" style="width:100%">
           <thead>
@@ -37,7 +38,13 @@
             </tr>
           </thead>
         </table>
+        <form id='newAdmin'>
+          <input class='textArea'  name = 'userName' id='userName' placeholder="New Admin Name"></input>
+          <input class='textArea'  name = 'userPassword'id='userPassword' placeholder="New Admin Password" ></input>
+          <button id='submit' type="submit">Create New Admin</button>
+        </form>
       </div>
+
     </div>
     <script src="js/applications.js"></script>
     <script src="js/utils.js"></script>

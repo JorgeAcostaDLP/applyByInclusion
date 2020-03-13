@@ -6,7 +6,6 @@ fetch('/forms')
     applications = data;
     $(document).ready(function() {
       let table = $('#applications-table');
-      console.log(applications);
       table.DataTable({
         data: applications,
         columns: [
@@ -25,7 +24,20 @@ fetch('/forms')
           currentTarget.indexOf('>') + 1,
           currentTarget.indexOf('</')
         );
-        $(location).attr('href', `/forms/` + formId);
+        $(location).attr(
+          'href',
+          'http://localhost:3000/singleApplication.html?' + formId
+        );
       });
     });
   });
+const newAdminForm = $('#newAdmin');
+newAdminForm.on('submit', submitHandler);
+function submitHandler(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '/admins',
+    type: 'POST',
+    data: newAdminForm.serialize()
+  }).then(location.reload());
+}

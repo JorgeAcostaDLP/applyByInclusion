@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     static async all() {
       return await this.findAll();
     }
+    static async once(adminKey) {
+      return await this.findAll({ where: { id: adminKey } });
+    }
 
     //this is the method used to create newAdmins
     static async newAdmin(userName, userPassword) {

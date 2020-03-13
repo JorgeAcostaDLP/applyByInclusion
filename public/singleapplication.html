@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/singleform.css" />
+    <title>Application</title>
+  </head>
+  <body>
+    <div clas="main" id="single-App">
+      <div id="form2">
+        <h2 id="appInfoName">Name</h1>
+        <div>
+          <label for="id">Id</label>
+          <p name="Id" id="appInfoId"></p>
+          <label>Graduated</label>
+          <p id="appInfoGraduated"></p>
+        </div>
+        <label>Why inclusion?</label>
+        <p id="appInfoWhy"></p>
+        <label>Status</label>
+        <p id="appInfoStatus"></p>
+        <label>Comments:</label>
+        <p id="previousComments"></p>
+        <form id='newComment'>
+          <input class='textArea'  name = 'comment' id='comment' placeholder="New Comment"></input>
+          <input class='textArea'  name = 'adminId'id='adminId' placeholder="adminKey" ></input>
+          <input class='textArea'  name = 'adminUserName'id='adminUserName' placeholder="adminName" ></input>
+          <input class='textArea'  name = 'formId' id='formId' hidden></input>
+          <button id='submit' type="submit">Add Comment</button>
+        </form>
+        <form id='updateStatus'>
+          <select id="status" name="status">
+            <option value="In Review">In Review</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Denied">Denied</option></select>
+          <input class='textArea'  name = 'formId'id='statusAdminId' placeholder="formId" hidden></input>
+          <button id='submit2' type="submit">Update Status</button>
+        </form>
+      </div>
+
+    </div>
+    <script src="js/singleApp.js"></script>
+
+  </body>
+</html>

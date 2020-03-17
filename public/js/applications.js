@@ -24,10 +24,7 @@ fetch('/forms')
           currentTarget.indexOf('>') + 1,
           currentTarget.indexOf('</')
         );
-        $(location).attr(
-          'href',
-          'http://localhost:3000/singleApplication.html?' + formId
-        );
+        $(location).attr('href', '/singleApplication.html?' + formId);
       });
     });
   });

@@ -8,7 +8,7 @@
     "storage": "data.test.sqlite3"
   },
   "production": {
-    "use_env_variable": "sqlite",
+    "dialect": "sqlite",
     "storage": "data.production.sqlite3"
   }
 }

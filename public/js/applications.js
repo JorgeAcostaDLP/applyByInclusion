@@ -24,7 +24,7 @@ fetch('/forms')
           currentTarget.indexOf('>') + 1,
           currentTarget.indexOf('</')
         );
-        $(location).attr('href', '/singleApplication.html?' + formId);
+        $(location).attr('href', '/singleapplication.html?' + formId);
       });
     });
   });

@@ -15,6 +15,8 @@ const adminsRouter = require('./routes/admins');
 const commentsRouter = require('./routes/comments');
 const authRouter = require('./routes/auth');
 
+const secured = require('./lib/middleware/secured');
+
 const sess = {
   secret: process.env.secret,
   cookie: {},

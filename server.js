@@ -13,12 +13,13 @@ const bodyParser = require('body-parser');
 const formsRouter = require('./routes/forms');
 const adminsRouter = require('./routes/admins');
 const commentsRouter = require('./routes/comments');
+const authRouter = require('./routes/auth');
 
 const sess = {
   secret: process.env.secret,
   cookie: {},
   resave: false,
-  saveUnitialized: true
+  saveUninitialized: true
 };
 
 if (app.get('env') === 'production') {
@@ -48,6 +49,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+app.use('/', authRouter);
 app.use('/forms', formsRouter);
 app.use('/admins', adminsRouter);
 app.use('/comments', commentsRouter);

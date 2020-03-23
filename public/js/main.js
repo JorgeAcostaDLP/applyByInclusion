@@ -1,2 +1,14 @@
-// jest won't error out on DOM calls.
-// console.log(document.querySelector('p').innerHTML);
+let admins = {};
+fetch('/admins/')
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    admins = data;
+  });
+
+document.getElementById('login').addEventListener('click', handleSubmit);
+
+function handleSubmit(e) {
+  e.preventDefault();
+}

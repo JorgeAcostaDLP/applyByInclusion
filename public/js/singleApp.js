@@ -52,12 +52,3 @@ fetch('/comments/' + formId)
         '<br/>';
     });
   });
-
-// let admins = {};
-// fetch('/admins/')
-//   .then(response => {
-//     return response.json();
-//   })
-//   .then(data => {
-//     admins = data;
-//   });

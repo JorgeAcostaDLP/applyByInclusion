@@ -10,8 +10,8 @@ module.exports = {
           createdAt: new Date()
         },
         {
-          userName: 'Not John Cena',
-          userPassword: 'NotCena',
+          userName: 'Admin',
+          userPassword: 'Password',
           createdAt: new Date()
         }
       ]),

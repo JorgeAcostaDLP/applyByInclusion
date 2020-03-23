@@ -5,7 +5,6 @@ fetch('/admins/')
   })
   .then(data => {
     admins = data;
-    console.log(admins);
   });
 
 document.getElementById('login').addEventListener('click', handleSubmitMain);

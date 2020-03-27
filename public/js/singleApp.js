@@ -19,6 +19,17 @@ function submitHandler(e) {
   }).then(location.reload());
 }
 
+const deleteForm = document.getElementById('delete');
+deleteForm.addEventListener('click', handleDeleteForm);
+function handleDeleteForm(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '/forms' + '/' + formId,
+    type: 'DELETE',
+    data: newCommentForm.serialize()
+  }).then($(location).attr('href', '/applications.html'));
+}
+
 const updateStatusForm = $('#updateStatus');
 updateStatusForm.on('submit', submitHandler2);
 function submitHandler2(e) {

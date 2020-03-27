@@ -24,4 +24,8 @@ router.put('/', async (req, res) => {
   await Forms.updateForm(req.body.formId, req.body.status);
 });
 
+router.delete('/:id', async (req, res) => {
+  await Forms.deleteForm(req.params.id);
+});
+
 module.exports = router;

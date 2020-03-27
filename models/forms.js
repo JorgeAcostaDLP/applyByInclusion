@@ -40,6 +40,9 @@ module.exports = (sequelize, DataTypes) => {
         { returning: false, where: { id: id } }
       );
     }
+    static async deleteForm(id) {
+      await this.destroy({ where: { id: id } });
+    }
   }
 
   return Forms;

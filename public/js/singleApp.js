@@ -1,6 +1,8 @@
 url = document.URL;
 formId = url.split('?')[1];
-
+if (localStorage.getItem('loggedIn') !== 'true') {
+  $(location).attr('href', '/');
+}
 const button = document.getElementById('back');
 button.addEventListener('click', handleBack);
 function handleBack(e) {

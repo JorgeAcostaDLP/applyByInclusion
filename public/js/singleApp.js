@@ -1,6 +1,13 @@
 url = document.URL;
 formId = url.split('?')[1];
 
+const button = document.getElementById('back');
+button.addEventListener('click', handleBack);
+function handleBack(e) {
+  e.preventDefault();
+  $(location).attr('href', '/applications.html');
+}
+
 const newCommentForm = $('#newComment');
 newCommentForm.on('submit', submitHandler);
 function submitHandler(e) {

@@ -9,6 +9,7 @@
   },
   "production": {
     "dialect": "sqlite",
-    "storage": "data.production.sqlite3"
+    "storage": "data.production.sqlite3",
+    "host": "mysql:3306"
   }
 }

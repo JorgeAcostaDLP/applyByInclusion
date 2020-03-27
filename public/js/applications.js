@@ -38,3 +38,11 @@ function submitHandler(e) {
     data: newAdminForm.serialize()
   }).then(location.reload());
 }
+
+const button = document.getElementById('logOut');
+button.addEventListener('click', handleLogOut);
+function handleLogOut(e) {
+  e.preventDefault();
+  localStorage.clear();
+  $(location).attr('href', '/');
+}

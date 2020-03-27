@@ -71,6 +71,16 @@ form {
   resize: none;
   text-align: right;
 }
+.form3 {
+  width: 100%;
+  border: 1px solid #2bc1f2;
+  padding: 1px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  height: auto;
+  resize: none;
+  text-align: right;
+}
 button {
   width: auto;
   padding: 10px 45px;

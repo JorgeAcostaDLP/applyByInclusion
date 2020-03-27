@@ -47,7 +47,7 @@ textarea {
   resize: none;
 }
 
-#submit {
+.but {
   width: auto;
   padding: 10px 45px;
   background-color: #2bc1f2;

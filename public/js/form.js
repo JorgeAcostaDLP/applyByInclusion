@@ -11,3 +11,10 @@ function submitHandler(e) {
     .then(alert('Form Submitted'))
     .then($(location).attr('href', '/'));
 }
+
+const button = document.getElementById('back');
+button.addEventListener('click', handleBack);
+function handleBack(e) {
+  e.preventDefault();
+  $(location).attr('href', '/');
+}

@@ -22,16 +22,7 @@
         <p id="appInfoWhy"></p>
         <label>Status</label>
         <p id="appInfoStatus"></p>
-        <label>Comments:</label>
-        <p id="previousComments"></p>
-        <form id='newComment'>
-          <input class='textArea'  name = 'comment' id='comment' placeholder="New Comment"></input>
-          <input class='textArea'  name = 'adminId'id='adminId' placeholder="adminKey" ></input>
-          <input class='textArea'  name = 'adminUserName'id='adminUserName' placeholder="adminName" ></input>
-          <input class='textArea'  name = 'formId' id='formId' hidden></input>
-          <button id='submit' type="submit">Add Comment</button>
-        </form>
-        <form id='updateStatus'>
+        <form id='updateStatus' class='form3'>
           <select id="status" name="status">
             <option value="In Review">In Review</option>
             <option value="Accepted">Accepted</option>
@@ -39,6 +30,17 @@
           <input class='textArea'  name = 'formId'id='statusAdminId' placeholder="formId" hidden></input>
           <button id='submit2' type="submit">Update Status</button>
         </form>
+        <label>Comments:</label>
+        <p id="previousComments"></p>
+        <form id='newComment'  class='form3'>
+          <input class='textArea'  name = 'comment' id='comment' placeholder="New Comment"></input>
+          <input class='textArea'  name = 'adminId'id='adminId' placeholder="adminKey" ></input>
+          <input class='textArea'  name = 'adminUserName'id='adminUserName' placeholder="adminName" ></input>
+          <input class='textArea'  name = 'formId' id='formId' hidden></input>
+          <button id='submit' type="submit">Add Comment</button>
+        </form>
+        
+        <button id='back'type='button'>Go Back</button>
       </div>
 
     </div>

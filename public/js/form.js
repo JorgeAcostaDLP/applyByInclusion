@@ -7,5 +7,7 @@ function submitHandler(e) {
     type: 'POST',
     data: form.serialize()
     //clears form data and displays latest reservation
-  }).then(location.reload());
+  })
+    .then(alert('Form Submitted'))
+    .then($(location).attr('href', '/'));
 }

@@ -38,7 +38,9 @@ function submitHandler(e) {
     data: newAdminForm.serialize()
   }).then(location.reload());
 }
-
+if (localStorage.getItem('loggedIn') !== 'true') {
+  $(location).attr('href', '/');
+}
 const button = document.getElementById('logOut');
 button.addEventListener('click', handleLogOut);
 function handleLogOut(e) {

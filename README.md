@@ -25,5 +25,5 @@ Applicant Management:
   - `npm start`
   - `npm test`
 
-Username: Admin
-Password: Password
+Username = Admin
+Password = Password

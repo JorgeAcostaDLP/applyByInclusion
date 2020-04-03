@@ -91,15 +91,6 @@ test('Comment.newComment(...) creates a new Comment in table', async () => {
   expect(result.length).toEqual(2);
 });
 
-test('Comments.newComment(...) increases id of newAdmin by 1', async () => {
-  const newComment = await Comments.newComment(
-    2,
-    'johncena',
-    'test1',
-    'testPassword1'
-  );
-  expect(newComment.dataValues.id).toEqual(3);
-});
 test('Comments.newComment(...) populates the fields correctly', async () => {
   const newComment = await Comments.newComment(2, 'john cena', 1, 'last test');
   expect(newComment.dataValues.comment).toEqual('last test');

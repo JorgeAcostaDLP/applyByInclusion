@@ -3,7 +3,8 @@
 
 # Apply by Inclusion
 Deployed at https://applybyinclusion2020.herokuapp.com/
-
+Username = Admin
+Password = Password
 ## Introduction
 
 Welcome to the applicant portal of the future.
@@ -25,5 +26,4 @@ Applicant Management:
   - `npm start`
   - `npm test`
 
-Username = Admin
-Password = Password
+

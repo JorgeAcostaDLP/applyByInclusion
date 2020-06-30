@@ -2,13 +2,7 @@
 
 
 # Apply by Inclusion
-Deployed at https://applybyinclusion2020.herokuapp.com/
-Username = Admin
-Password = Password
-## Introduction
-
 Welcome to the applicant portal of the future.
-
 Form Submission:
 - Form publically available for any prospective applicants to fill out, URL unique to the form.
 
@@ -19,7 +13,11 @@ Applicant Management:
 - An admin can mark an application as UNDER_REVIEW, REJECTED, or ACCEPTED.
 - An admin can create a login for another admin.
 
-## Getting Started
+Deployed at https://applybyinclusion2020.herokuapp.com/
+Username: Admin
+Password: Password
+
+## Code
 
   - `npm install`
   - `npm seedTestData`

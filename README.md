@@ -14,8 +14,8 @@ Applicant Management:
 - An admin can create a login for another admin.
 
 Deployed at https://applybyinclusion2020.herokuapp.com/
-Username: Admin
-Password: Password
+Username is Admin,
+Password is Password
 
 ## Code
 
